@@ -1,5 +1,30 @@
-<!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
-<script>
+function highlight(el){
+    if (el.style.backgroundColor == 'white'){//if white, then turn yellow
+       el.style.backgroundColor='yellow';
+    } else {//turn white
+     el.style.backgroundColor='white';
+    }
+}
+
+
+function myAlert(){
+    alert("I'm clicked!");
+}
+
+let spans = document.querySelectorAll("#play span");
+ 
+console.log(spans);
+
+for(const mySpan of spans){
+    mySpan .addEventListener("click",myAlert);
+}
+
+
+
+
+
+
+
 //https://tinyurl.com/dynamic-html-checker
 document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
   
